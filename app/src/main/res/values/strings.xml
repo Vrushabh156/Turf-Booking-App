@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Turf Booking System</string>
+    <string name="near_by_turf">NearByTurf</string>
+    <string name="smallTxt">"Claim Your Spot, Anytime Anywhere!"</string>
+    <string name="ownerReg">Owner Turf Registration</string>
+    <string name="userReg">User Registration</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="signIn">Sign In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="fName">First Name</string>
+    <string name="lName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="dob">DOB</string>
+    <string name="mNo">Mobile No.</string>
+    <string name="address">Address</string>
+</resources>
