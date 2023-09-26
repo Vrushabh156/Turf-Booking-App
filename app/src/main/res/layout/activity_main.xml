@@ -12,12 +12,12 @@
         android:layout_width="286dp"
         android:layout_height="251dp"
         android:src="@drawable/img"
-        app:layout_constraintBottom_toTopOf="@+id/tv"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.192"
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <TextView
@@ -31,8 +31,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446"
+        app:layout_constraintTop_toBottomOf="@+id/imgV"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -40,10 +40,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/smallTxt"
-        android:textColor="#14D6D6"
+        android:textColor="#038383"
         android:textSize="20sp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
