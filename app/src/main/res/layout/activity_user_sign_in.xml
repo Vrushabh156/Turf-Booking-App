@@ -35,12 +35,13 @@
         tools:ignore="SpUsage" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText6"
+        android:id="@+id/email"
         android:layout_width="327dp"
-        android:layout_height="53dp"
+        android:layout_height="50dp"
         android:background="@drawable/input_bg"
         android:hint="Email"
         android:paddingStart="22dp"
+        android:inputType="textEmailAddress"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,9 +52,10 @@
 
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText7"
+        android:id="@+id/password"
         android:layout_width="327dp"
-        android:layout_height="53dp"
+        android:layout_height="50dp"
+        android:inputType="textVisiblePassword"
         android:background="@drawable/input_bg"
         android:hint="Password"
         android:paddingStart="22dp"
@@ -61,7 +63,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText6"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.117"
         tools:ignore="HardcodedText,RtlSymmetry" />
 
@@ -72,21 +74,23 @@
         android:layout_marginBottom="44dp"
         android:text="@string/forgot_password"
         android:textColor="#172DF4"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText7"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.067"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="357dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:text="@string/login"
-        android:textSize="25sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

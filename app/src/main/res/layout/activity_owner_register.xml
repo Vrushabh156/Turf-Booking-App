@@ -21,9 +21,10 @@
         app:layout_constraintVertical_bias="0.09" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText11"
+        android:id="@+id/firstName"
         android:layout_width="169dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
+        android:inputType="text"
         android:layout_marginStart="16dp"
         android:background="@drawable/input_bg"
         android:hint="@string/fName"
@@ -37,9 +38,10 @@
         tools:ignore="RtlSymmetry" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/lastName"
         android:layout_width="169dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
+        android:inputType="text"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_bg"
         android:hint="@string/lName"
@@ -53,10 +55,11 @@
         tools:ignore="RtlSymmetry" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/email"
         android:layout_width="378dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
+        android:inputType="textEmailAddress"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_bg"
         android:hint="@string/email"
@@ -65,16 +68,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText11"
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
         app:layout_constraintVertical_bias="0.045"
         tools:ignore="MissingConstraints,RtlSymmetry" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText3"
+        android:id="@+id/password"
         android:layout_width="378dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:inputType="textVisiblePassword"
         android:background="@drawable/input_bg"
         android:hint="@string/password"
         android:paddingStart="22dp"
@@ -82,16 +86,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.056"
         tools:ignore="MissingConstraints,RtlSymmetry" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText4"
+        android:id="@+id/dob"
         android:layout_width="378dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:inputType="date"
         android:background="@drawable/input_bg"
         android:hint="@string/dob"
         android:paddingStart="22dp"
@@ -99,54 +104,58 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText3"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.07"
         tools:ignore="MissingConstraints,RtlSymmetry" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText8"
+        android:id="@+id/mobileNo"
         android:layout_width="378dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_bg"
+        android:inputType="number"
         android:hint="@string/mNo"
         android:paddingStart="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText4"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
         app:layout_constraintVertical_bias="0.083"
         tools:ignore="MissingConstraints,RtlSymmetry" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText5"
+        android:id="@+id/address"
         android:layout_width="378dp"
-        android:layout_height="57dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/input_bg"
         android:hint="@string/address"
         android:paddingStart="22dp"
+        android:inputType="textPostalAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText8"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNo"
         app:layout_constraintVertical_bias="0.121"
         tools:ignore="MissingConstraints,RtlSymmetry" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/register"
         android:layout_width="357dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:text="@string/register"
-        android:textSize="25sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText5"
+        app:layout_constraintTop_toBottomOf="@+id/address"
         app:layout_constraintVertical_bias="0.623" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

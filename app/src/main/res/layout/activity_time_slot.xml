@@ -1,0 +1,109 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TimeSlot"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:calendarViewShown="false" />
+
+    <Spinner
+        android:id="@+id/startTimeSpinner"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/input_bg"
+        android:layout_below="@id/datePicker"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="65dp" />
+
+    <Spinner
+        android:id="@+id/endTimeSpinner"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/datePicker"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/input_bg"
+        android:paddingStart="15dp" />
+
+
+    <TextView
+        android:id="@+id/starttextView"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/startTimeSpinner"
+        android:layout_alignStart="@+id/startTimeSpinner"
+        android:layout_alignEnd="@+id/startTimeSpinner"
+        android:layout_marginStart="1dp"
+        android:paddingStart="15dp"
+        android:paddingTop="3dp"
+        android:layout_marginBottom="-60dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        android:text="Start Time" />
+
+    <TextView
+        android:id="@+id/endtextView2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/endTimeSpinner"
+        android:layout_alignStart="@+id/endTimeSpinner"
+        android:layout_alignEnd="@+id/endTimeSpinner"
+        android:layout_marginStart="1dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:paddingTop="3dp"
+        android:layout_marginBottom="-60dp"
+        android:text="End Time"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Pay"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startTimeSpinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_corner"
+        android:text="Pay"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="253dp" />
+    </RelativeLayout>
+</ScrollView>

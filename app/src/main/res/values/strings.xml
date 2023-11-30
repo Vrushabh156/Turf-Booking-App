@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Turf Booking System</string>
+    <string name="app_name">Turf</string>
     <string name="near_by_turf">NearByTurf</string>
     <string name="smallTxt">"Claim Your Spot, Anytime Anywhere!"</string>
     <string name="ownerReg">Owner Turf Registration</string>
@@ -15,4 +15,14 @@
     <string name="dob">DOB</string>
     <string name="mNo">Mobile No.</string>
     <string name="address">Address</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location">Location</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_booking">My Booking</string>
+    <string name="help_and_support">Help and\nSupport</string>
+    <string name="about_us">About us</string>
+    <string name="turf">All Turf</string>
+    <string name="realtime_store">Store Retrieve Realtime</string>
+    <string name="pay">Next</string>
 </resources>
