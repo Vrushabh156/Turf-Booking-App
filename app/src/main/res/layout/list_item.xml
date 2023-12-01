@@ -22,8 +22,8 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/dateTextView"
-            android:layout_width="296dp"
+            android:id="@+id/customerNameTextView"
+            android:layout_width="wrap_content"
             android:layout_height="31dp"
             android:layout_marginTop="10dp"
             android:paddingStart="20dp"
@@ -37,46 +37,62 @@
             tools:text="Customer Name: Vaibhav Lajurkar"/>
 
         <TextView
-            android:id="@+id/startTimeTextView"
-            android:layout_width="293dp"
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
             android:layout_height="31dp"
             android:paddingStart="20dp"
-            android:text="Mobile Number: "
+            android:text="Date: "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customerNameTextView"
+            tools:text="Date: October 10, 2023" />
+
+        <TextView
+            android:id="@+id/startTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:paddingStart="20dp"
+            android:text="Start Time: "
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dateTextView"
-            tools:text="Mobile Number: 8787878787" />
+            tools:text="Start Time: 10:00 AM" />
 
         <TextView
             android:id="@+id/endTimeTextView"
-            android:layout_width="286dp"
-            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
             android:paddingStart="20dp"
-            android:text="Game Name: "
+            android:text="End Time: "
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/startTimeTextView"
-            tools:text="Game Name: Football" />
+            tools:text="End Time: 11:00 AM" />
 
-        <TextView
-            android:id="@+id/customerNameTextView"
-            android:layout_width="296dp"
-            android:layout_height="33dp"
-            android:paddingStart="20dp"
-            android:text="Team Size: "
-            android:textColor="@color/white"
+        <Button
+            android:id="@+id/moreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/endTimeTextView"
-            tools:text="Team Size: 60" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.92" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

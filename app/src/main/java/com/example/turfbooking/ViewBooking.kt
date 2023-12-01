@@ -2,7 +2,9 @@ package com.example.turfbooking
 
 import adapters.MyAdapter4ViewBooking
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,10 +18,19 @@ class ViewBooking : AppCompatActivity() {
     private lateinit var valueEventListener: ValueEventListener
     private lateinit var myAdapter: MyAdapter4ViewBooking
 
+//    private lateinit var more: Button
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_booking)
+//
+//        more = findViewById(R.id.moreTextView)
+//
+//        more.setOnClickListener {
+//            // Navigate to SuccessfullyConfirmedActivity upon "Conform" button click
+//            val intent = Intent(this@ViewBooking, CustomerInformation::class.java)
+//            startActivity(intent)
+//        }
 
         newRecyclerView = findViewById(R.id.recycleview)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -30,10 +41,17 @@ class ViewBooking : AppCompatActivity() {
         newRecyclerView.adapter = myAdapter
 
         // Initialize Firebase Database reference for "customer_info" node
-        val customerInfoRef = FirebaseDatabase.getInstance().reference.child("customer_info")
+        val customerInfoRef = FirebaseDatabase.getInstance().reference.child("bookings")
 
         // Fetch data from "customer_info" node
         fetchDataFromFirebase(customerInfoRef)
+        myAdapter.setOnItemClickListener(object : MyAdapter4ViewBooking.OnItemClickListener {
+            override fun onItemClick(item: New) {
+                val intent = Intent(this@ViewBooking,CustomerInformation::class.java)
+                // Pass data to the next activity if needed: intent.putExtra("key", value)
+                startActivity(intent)
+            }
+        })
     }
 
     private fun fetchDataFromFirebase(databaseRef: DatabaseReference) {
@@ -43,15 +61,12 @@ class ViewBooking : AppCompatActivity() {
                     newArrayList.clear() // Clear previous data if any
 
                     for (dataSnapshot in snapshot.children) {
-                        val customerName = dataSnapshot.child("Fullname").getValue(String::class.java) ?: ""
-                        val mobileNumber = dataSnapshot.child("Mobilenumber").getValue(String::class.java) ?: ""
-                        val gameName =
-                            dataSnapshot.child("GameName").getValue(String::class.java) ?: ""
-                        val teamSize =
-                            dataSnapshot.child("TeamSize").getValue(String::class.java) ?: ""
+                        val customerName = dataSnapshot.child("fullName").getValue(String::class.java) ?: ""
+                        val date = dataSnapshot.child("date").getValue(String::class.java) ?: ""
+                        val startTime = dataSnapshot.child("startTime").getValue(String::class.java) ?: ""
+                        val endTime = dataSnapshot.child("endTime").getValue(String::class.java) ?: ""
 
-
-                        val new = New(customerName, mobileNumber, gameName, teamSize)
+                        val new = New(customerName, date, startTime, endTime)
                         newArrayList.add(new)
                     }
                     myAdapter.notifyDataSetChanged() // Notify adapter of changes
