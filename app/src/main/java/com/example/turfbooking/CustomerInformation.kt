@@ -53,10 +53,10 @@ class CustomerInformation : AppCompatActivity() {
                     val address = dataSnapshot.child("address").getValue(String::class.java)
                     val mobileNumber = dataSnapshot.child("mobileNumber").getValue(String::class.java)
                     val email = dataSnapshot.child("email").getValue(String::class.java)
-                    val teamSize = dataSnapshot.child("teamSize").getValue(Int::class.java)
+                    val teamSize = dataSnapshot.child("teamSize").getValue(String::class.java)
                     val gameName = dataSnapshot.child("gameName").getValue(String::class.java)
                     val date = dataSnapshot.child("date").getValue(String::class.java)
-                    val startTime = dataSnapshot.child("startTime").getValue(Int::class.java)
+                    val startTime = dataSnapshot.child("startTime").getValue(String::class.java)
                     val endTime = dataSnapshot.child("endTime").getValue(String::class.java)
 
                     // Set retrieved data to TextViews
@@ -66,9 +66,9 @@ class CustomerInformation : AppCompatActivity() {
                     emailTextView.text = "Email: $email"
                     teamSizeTextView.text = "Team Size: $teamSize"
                     gameNameTextView.text = "Game Name: $gameName"
-                    dateTextView.text = "Customer Name: $date"
-                    startTimeTextView.text = "Address: $startTime"
-                    endTimeTextView.text = "Mobile Number: $endTime"
+                    dateTextView.text = "Date: $date"
+                    startTimeTextView.text = "Start Time: $startTime"
+                    endTimeTextView.text = "End Time: $endTime"
 
                 }
             }
